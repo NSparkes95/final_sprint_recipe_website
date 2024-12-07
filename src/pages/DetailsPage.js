@@ -41,6 +41,30 @@ function DetailsPage() {
     }
   };
 
+  // Add to favourites handler
+  const addToFavorites = async () => {
+    try {
+      const response = await fetch("http://localhost:5001/favorites", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          id: recipe.idMeal,
+          title: recipe.strMeal,
+          image: recipe.strMealThumb,
+        }),
+      });
+      if (response.ok) {
+        alert("Recipe added to favourites!");
+      } else {
+        alert("Failed to add to favourites.");
+      }
+    } catch (err) {
+      console.error("Error adding to favourites:", err);
+    }
+  };
+
   if (error) {
     return <p className="error">{error}</p>;
   }
@@ -76,9 +100,18 @@ function DetailsPage() {
           <li key={index}>{step}</li>
         ))}
       </ol>
-      <button className="add-to-favorites-btn" onClick={addToCartHandler}>
-        Add Ingredients to Cart
-      </button>
+      <div className="buttons-container">
+        {/* Add Ingredients to Cart */}
+        <button className="add-to-cart-btn" onClick={addToCartHandler}>
+          Add Ingredients to Cart
+        </button>
+
+        {/* Add to Favourites */}
+        <button className="add-to-favorites-btn" onClick={addToFavorites}>
+          Add to Favourites
+        </button>
+      </div>
+
     </div>
   );
 }

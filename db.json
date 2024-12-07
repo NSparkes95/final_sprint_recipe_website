@@ -1,0 +1,16 @@
+{
+    "recipes": [
+      {
+        "id": 1,
+        "title": "Spaghetti Carbonara",
+        "ingredients": ["Spaghetti", "Eggs", "Pancetta", "Parmesan"],
+        "instructions": "Boil pasta. Fry pancetta. Mix eggs and cheese. Combine."
+      },
+      {
+        "id": 2,
+        "title": "Chicken Tikka Masala",
+        "ingredients": ["Chicken", "Yogurt", "Spices", "Tomato Sauce"],
+        "instructions": "Marinate chicken. Cook in sauce. Serve with rice."
+      }
+    ]
+  }
