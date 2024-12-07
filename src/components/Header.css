@@ -1,0 +1,84 @@
+/* Description: This file contains the CSS for the Header component.
+Name: Nicole Sparkes
+Date: 12/06/2024 */
+
+.header {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.header h1 {
+    font-size: 3rem; /* Adjust size as needed */
+    font-family: 'Dancing Script', cursive; /* Add this font */
+    color: #ff6f61; /* Make it pop */
+    margin: 0;
+    position: absolute;
+    top: 50%; /* Vertically centers the text */
+    left: 50%; /* Horizontally centers the text */
+    transform: translate(-50%, -50%); /* Ensures perfect centering */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Better readability */
+}
+
+.header nav {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.header nav a {
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.header nav a:hover {
+    color: #ff6f61;
+    transform: scale(1.1);
+}
+
+.cart-page {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.cart-page ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-page li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.cart-page button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-page button:hover {
+    background-color: #e64a19;
+}
