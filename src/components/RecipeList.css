@@ -1,71 +1,51 @@
 .recipe-list {
-    display: flex;
-    flex-wrap: wrap; /* Wrap the cards to the next line */
-    justify-content: center; /* Add space between the cards */
-    margin: 30px;
-    gap: 40px; /* Add gap between the cards */
-    text-align: center;
+    display: grid;
+    justify-content: wrap;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px; /* Spacing between cards */
+    padding: 20px;
 }
 
 .recipe-card {
     background-color: white;
-    border-radius: 12px; /* Rounded corners */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-    perspective: 1000px; /* Perspective for tilt effect */
-    transform-style: preserve-3d; /* Required for 3D effects */
-    width: calc(50% - 20px); /* Adjust to fit two cards per row */
-    max-width: 400px; /* Optional: Cap the width */
-}
-
-.recipe-card:hover {
-    transform: rotateY(-5deg) scale(1.03); /* Slight tilt and zoom */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Deeper shadow */
-
-}
-
-.recipe-card h3 {
-    margin: 10px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    color: #333;
-    text-align: center;
-}
-
-.recipe-card p {
-    margin: 0 10px 10px;
-    color: #666;
-    font-size: 14px;
-    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px; /* Adjust padding for content */
 }
 
 .recipe-card img {
     width: 100%;
     height: auto;
-    border-bottom: 2px solid #ff6f61; /* Accent line below the image */
+    border-radius: 10px;
 }
 
-.recipe-card .details-link {
-    display: block;
-    text-align: center;
-    margin: 10px auto;
-    padding: 10px 20px;
-    background-color: #ff6f61;
+.recipe-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.recipe-card p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.recipe-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #ff6600;
     color: white;
+    border-radius: 5px;
     text-decoration: none;
-    border-radius: 8px;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
 }
 
-.recipe-card .details-link:hover {
-    background-color: #e64a19; /* Slightly darker orange */
-}
-
-/* Media Query for Smaller Screens */
-@media (max-width: 768px) {
-    .recipe-card {
-        width: 100%; /* Full width on smaller screens */
-    }
+.recipe-card a:hover {
+    background-color: #e05500;
 }

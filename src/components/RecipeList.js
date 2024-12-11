@@ -1,13 +1,20 @@
+// Description: This file contains the RecipeList component which is responsible for rendering the list of recipes returned from the API.
+// Name: Nicole Sparkes
+// Date: Dec/10/2024
+
 import React from 'react';
 import './RecipeList.css';
 
 function RecipeList({ recipes }) {
-    if (!recipes.length) {
-        return <p>No recipes found. Try searching for something else!</p>
+    const limitedRecipes = recipes.slice(0, 6); // Limit to 6 recipes
+
+    if (!limitedRecipes.length) {
+        return <p>No recipes found. Try searching for something else!</p>;
     }
+
     return (
         <div className="recipe-list">
-            {recipes.map((recipe) => (
+            {limitedRecipes.map((recipe) => (
                 <div className="recipe-card" key={recipe.idMeal}>
                     <img src={recipe.strMealThumb} alt={recipe.strMeal} />
                     <h3>{recipe.strMeal}</h3>
