@@ -36,7 +36,13 @@ function DetailsPage() {
       const ingredients = Object.keys(recipe)
         .filter((key) => key.startsWith("strIngredient") && recipe[key])
         .map((key) => recipe[key]);
-      addToCart(ingredients); // Use the addToCart function from the context
+      
+      const cartItem = {
+        id: recipe.idMeal,
+            title: recipe.strMeal,
+            price: 16.99,
+      }
+      addToCart(cartItem); // Use the addToCart function from the context
       alert("Ingredients added to cart!");
     }
   };

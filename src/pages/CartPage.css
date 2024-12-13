@@ -159,3 +159,19 @@
     border-radius: 4px;
     cursor: pointer;
   }
+
+  .cart-summary {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.cart-item-price {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
