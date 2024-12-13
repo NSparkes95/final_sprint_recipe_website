@@ -106,11 +106,12 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    margin:20px;
   }
   
   .checkout-modal-content {
     background-color: #fff;
-    padding: 20px;
+    padding: 40px;
     border-radius: 8px;
     width: 400px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);

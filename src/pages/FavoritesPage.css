@@ -1,89 +1,38 @@
-.favorites-page {
-    background-image: url('../Images/background.jpg');
-    background-color: #f4f4f4;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Scroll effect */
+.main-content {
     padding: 20px;
-    min-height: 100vh;
-    color: white;
-    text-align: center;
-}
-
-.favorites-title {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: Arial, sans-serif;
 }
 
 .favorites-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    list-style-type: none;
+    padding: 0;
 }
 
-.no-favorites {
-    font-size: 1.5rem;
-    margin-top: 50px;
-    color: #ccc;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.recipe-card {
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s ease;
-    margin: 15px;
-    width: calc(50% - 30px); /* Display two cards side by side */
-    max-width: 400px;
-}
-
-.recipe-card:hover {
-    transform: translateY(-10px) rotate(2deg); /* Tilt effect */
-}
-
-.recipe-card img {
-    width: 100%;
-    height: auto;
-    border-bottom: 3px solid #ffd95e; /* Add a golden border */
-}
-
-.recipe-card .content {
-    padding: 15px;
-    text-align: center;
-}
-
-.recipe-card .title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
+.favorite-item {
     margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
 }
 
-.recipe-card .details-link {
-    margin-top: 10px;
-    color: #ff6f61;
-    text-decoration: none;
+.remove-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.remove-button:hover {
+    background-color: #ff3333;
+}
+
+.error-message {
+    color: red;
     font-weight: bold;
-}
-
-.recipe-card .details-link:hover {
-    text-decoration: underline;
-}
-
-.main-content {
-    padding: 20px; /* Optional padding */
-}
-
-/* Make recipe cards responsive */
-@media (max-width: 768px) {
-    .recipe-card {
-        width: 100%;
-    }
+    margin-top: 10px;
 }

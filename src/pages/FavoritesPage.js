@@ -26,20 +26,20 @@ function FavoritesPage() {
 
     return (
         <div className="main-content">
-        <h1>Your Favorite Recipes</h1>
-        {favorites.length > 0 ? (
-            <ul>
-                {favorites.map((recipe) => (
-                    <li key={recipe.id}>
-                        <h3>{recipe.title}</h3>
-                        <button onClick={() => removeFromFavorites(recipe.id)}>Remove</button>
-                    </li>
-                ))}
-            </ul>
-        ) : (
-            <p>You haven't added any favorite recipes yet!</p>
-        )}
-    </div>
+            <h1>Your Favorite Recipes</h1>
+            {favorites.length > 0 ? (
+                <ul>
+                    {favorites.map((recipe) => (
+                        <li key={recipe.id}>
+                            <h3>{recipe.title}</h3>
+                            <button onClick={() => removeFromFavorites(recipe.id)}>Remove</button>
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                <p>You haven't added any favorite recipes yet!</p>
+            )}
+        </div>
     );
 }
 
